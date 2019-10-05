@@ -43,7 +43,14 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.all(8.0),
                 child: CircleAvatar(
                   radius: 16,
-                  backgroundColor: Colors.white,
+                  child: ClipOval(
+                    child: Image.asset(
+                      'assets/cat.jpg',
+                      width: 100,
+                      height: 100,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
               ),
               Column(
@@ -117,8 +124,76 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
           Row(
-            children: <Widget>[text],
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(left: 15),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    text,
+                    Padding(
+                      padding: const EdgeInsets.only(top: 5),
+                      child: Row(
+                        children: <Widget>[
+                          Text(
+                            "Animais_oficial",
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 5),
+                            child: Text(
+                              "Se liga no olhar deste belo animalzinho",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
+          Row(
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.only(left: 15, top: 5),
+                child: CircleAvatar(
+                  radius: 12,
+                  child: ClipOval(
+                    child: Image.asset(
+                      'assets/cat.jpg',
+                      width: 100,
+                      height: 100,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 5, top: 5),
+                child: Text(
+                  "Adicione um comentário...",
+                  style: TextStyle(color: Colors.white, fontSize: 12),
+                ),
+              ),
+              Spacer(),
+              Padding(
+                padding: const EdgeInsets.only(left: 5, top: 5),
+                child: IconButton(
+                  icon: Icon(
+                    Icons.add,
+                    color: Colors.white,
+                    size: 12,
+                  ),
+                  onPressed: () {},
+                ),
+              )
+            ],
+          )
         ],
       );
     }
@@ -133,10 +208,15 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               CircleAvatar(
-                radius: 30.0,
-                backgroundImage: NetworkImage(
-                    'https://www.seekpng.com/png/full/43-432878_select-template-instagram-story-circle-png.png'),
-                backgroundColor: Colors.transparent,
+                radius: 30,
+                child: ClipOval(
+                  child: Image.asset(
+                    'assets/cat.jpg',
+                    width: 100,
+                    height: 100,
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 5),
